@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyAuth Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">KeyAuth</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-page="licenses">
+                <span class="nav-icon">🔑</span>
+                <span class="nav-text">Lisanslar</span>
+            </a>
+            <a href="#" class="nav-item" data-page="create">
+                <span class="nav-icon">➕</span>
+                <span class="nav-text">Lisans Oluştur</span>
+            </a>
+            <a href="#" class="nav-item" data-page="validate">
+                <span class="nav-icon">✓</span>
+                <span class="nav-text">Doğrula</span>
+            </a>
+            <a href="#" class="nav-item" data-page="logs">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Loglar</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <span class="user-name" id="username">Admin</span>
+                <button class="logout-btn" onclick="logout()">
+                    <span>🚪</span> Çıkış
+                </button>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="main-header">
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="header-actions">
+                <button class="btn-icon" onclick="toggleTheme()">
+                    <span>🌙</span>
+                </button>
+                <button class="btn-icon" onclick="refreshData()">
+                    <span>🔄</span>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Page Content -->
+        <div id="pageContent" class="page-content">
+            <!-- İçerik JavaScript ile yüklenecek -->
+        </div>
+    </main>
+    
+    <!-- Modals -->
+    <div id="modalContainer"></div>
+    
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
